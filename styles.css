@@ -1,0 +1,157 @@
+/* styles.css */
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the modern body font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline from links */
+}
+
+main {
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #4a90e2, #50e3c2); /* Gradient background */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center align text */
+    font-family: 'Poppins', sans-serif; /* Apply modern font for header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+}
+
+.header-content h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5em; /* Larger font size for the header */
+    font-weight: 600; /* Font weight */
+}
+
+.header-content p {
+    margin: 10px 0 0; /* Margin for the paragraph */
+    font-size: 1.2em; /* Slightly larger font size */
+}
+
+.header-content a {
+    color: #fff; /* White color for links */
+    font-weight: 600; /* Font weight for links */
+}
+
+.header-content a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Catalog section styles */
+.catalog {
+    text-align: center; /* Center align text */
+    padding: 20px;
+    background-color: #f7f7f7; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.catalog h2 {
+    font-size: 2em; /* Larger font size */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below heading */
+    font-family: 'Poppins', sans-serif; /* Apply modern font for headings */
+}
+
+/* Product grid styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    padding: 10px;
+}
+
+/* Product card styles */
+.product-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover image */
+}
+
+.product-card h3 {
+    margin: 10px;
+    font-size: 1.2em; /* Font size for product name */
+    color: #333; /* Dark text color */
+    font-family: 'Poppins', sans-serif; /* Apply modern font for product names */
+}
+
+/* Popup modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); /* Dark background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, .close {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
